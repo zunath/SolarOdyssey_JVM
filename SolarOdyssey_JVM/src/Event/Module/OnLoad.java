@@ -1,6 +1,7 @@
 package Event.Module;
 
 import Common.IScriptEventHandler;
+import GameSystems.StructureSystem;
 import NWNX.*;
 import org.nwnx.nwnx2.jvm.NWObject;
 import org.nwnx.nwnx2.jvm.NWScript;
@@ -18,10 +19,9 @@ public class OnLoad implements IScriptEventHandler {
         NWScript.getLocalObject(objSelf, "NWNX!INIT");
         NWScript.deleteLocalString(objSelf, "NWNX!INIT");
 
-        // Bioware default
-        NWScript.executeScript("x2_mod_def_load", objSelf);
-        // SimTools and NWNX
-        NWScript.executeScript("fky_chat_modload", objSelf);
+        NWScript.executeScript("x2_mod_def_load", objSelf); // Bioware Default
+        NWScript.executeScript("fky_chat_modload", objSelf); // SIMTools and NWNX
+        StructureSystem.OnModuleLoad(); // Structure System
     }
 
 
@@ -30,7 +30,7 @@ public class OnLoad implements IScriptEventHandler {
         NWObject area = NWNX_Funcs.GetFirstArea();
         while(NWScript.getIsObjectValid(area))
         {
-            String result = NWNX_Funcs.SetEventHandler(area, AreaScript.OnEnter, "soo_area_enter");
+            NWNX_Funcs.SetEventHandler(area, AreaScript.OnEnter, "soo_area_enter");
             NWNX_Funcs.SetEventHandler(area, AreaScript.OnExit, "soo_area_exit");
             NWNX_Funcs.SetEventHandler(area, AreaScript.OnHeartbeat, "soo_area_hb");
             NWNX_Funcs.SetEventHandler(area, AreaScript.OnUserDefinedEvent, "soo_area_user");
