@@ -1,5 +1,6 @@
 package Data;
 import Entities.*;
+import Helper.ErrorHelper;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -52,7 +53,7 @@ public class DataAccess {
             }
         }
         catch (IOException ex) {
-            // TODO: Log exception
+            ErrorHelper.HandleException(ex, "DataAccess.java");
         }
 
         CreateSessionFactory();

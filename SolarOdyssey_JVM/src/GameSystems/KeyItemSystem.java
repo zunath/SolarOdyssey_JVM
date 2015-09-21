@@ -1,4 +1,4 @@
-package System;
+package GameSystems;
 
 import Entities.PCKeyItemEntity;
 import GameObject.PlayerGO;

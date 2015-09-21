@@ -77,7 +77,7 @@ public class DialogManager {
             });
         }
         catch(Exception ex) {
-            ErrorHelper.HandleException(ex, "DialogStart was unable to execute class method: contagionJVM.Dialog.Conversation_" + conversationName + ".Initialize()");
+            ErrorHelper.HandleException(ex, "DialogStart was unable to execute class method: Conversation." + conversationName + ".Initialize()");
         }
     }
 

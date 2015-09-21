@@ -10,7 +10,7 @@ import GameObject.PlayerGO;
 import Helper.ColorToken;
 import Data.Repository.PlayerRepository;
 import Data.Repository.StructureRepository;
-import System.StructureSystem;
+import GameSystems.StructureSystem;
 import org.nwnx.nwnx2.jvm.NWObject;
 import org.nwnx.nwnx2.jvm.NWScript;
 

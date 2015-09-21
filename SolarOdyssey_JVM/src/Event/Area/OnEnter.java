@@ -4,8 +4,8 @@ import Entities.PlayerEntity;
 import GameObject.PlayerGO;
 import Common.IScriptEventHandler;
 import Data.Repository.PlayerRepository;
-import System.KeyItemSystem;
-import System.MigrationSystem;
+import GameSystems.KeyItemSystem;
+import GameSystems.MigrationSystem;
 import org.nwnx.nwnx2.jvm.*;
 
 @SuppressWarnings("UnusedDeclaration")

@@ -3,7 +3,7 @@ package Item.OmniTool;
 import Dialog.DialogManager;
 import Common.IScriptEventHandler;
 import NWNX.NWNX_Events;
-import System.StructureSystem;
+import GameSystems.StructureSystem;
 import org.nwnx.nwnx2.jvm.NWLocation;
 import org.nwnx.nwnx2.jvm.NWObject;
 import org.nwnx.nwnx2.jvm.NWScript;

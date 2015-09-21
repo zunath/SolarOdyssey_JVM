@@ -58,6 +58,7 @@ public class PlayerGO {
     public PlayerEntity createEntity()
     {
         NWLocation location = NWScript.getLocation(_pc);
+        NWLocation bindLocation = NWScript.getLocation(NWScript.getWaypointByTag("SOO_START_POINT"));
 
         PlayerEntity entity = new PlayerEntity();
         entity.setPCID(getUUID());
@@ -68,18 +69,15 @@ public class PlayerGO {
         entity.setLocationX(location.getX());
         entity.setLocationY(location.getY());
         entity.setLocationZ(location.getZ());
-        entity.setInfectionCap(100);
-        entity.setMaxHunger(100);
-        entity.setCurrentHunger(100);
-        entity.setInfectionRemovalTick(600);
         entity.setCreateTimestamp(new Date());
-        entity.setUnallocatedSP(10);
         entity.setLevel(1);
         entity.setExperience(0);
-        entity.setNextSPResetDate(null);
-        entity.setNumberOfSPResets(0);
         entity.setVersionNumber(Constants.PlayerVersionNumber);
-        entity.setResetTokens(3);
+        entity.setBindLocationX(bindLocation.getX());
+        entity.setBindLocationY(bindLocation.getY());
+        entity.setBindLocationZ(bindLocation.getZ());
+        entity.setBindLocationOrientation(bindLocation.getFacing());
+        entity.setBindLocationAreaTag(NWScript.getTag(bindLocation.getArea()));
 
         return entity;
     }

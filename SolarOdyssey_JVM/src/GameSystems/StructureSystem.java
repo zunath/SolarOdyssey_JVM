@@ -1,4 +1,4 @@
-package System;
+package GameSystems;
 
 import Entities.*;
 import Enumerations.StructurePermission;

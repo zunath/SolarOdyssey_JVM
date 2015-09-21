@@ -9,6 +9,7 @@ public class OnLoad implements IScriptEventHandler {
     @Override
     public void runScript(NWObject objSelf) {
 
+        AddModuleEventHandlers();
         AddGlobalEventHandlers();
         AddAreaEventHandlers();
 
@@ -36,6 +37,26 @@ public class OnLoad implements IScriptEventHandler {
 
             area = NWNX_Funcs.GetNextArea();
         }
+    }
+
+    private void AddModuleEventHandlers()
+    {
+        NWNX_Funcs.SetEventHandler(NWObject.MODULE, ModuleScripts.OnAcquireItem, "soo_mod_acquire");
+        NWNX_Funcs.SetEventHandler(NWObject.MODULE, ModuleScripts.OnActivateItem, "soo_mod_activate");
+        NWNX_Funcs.SetEventHandler(NWObject.MODULE, ModuleScripts.OnClientEnter, "soo_mod_enter");
+        NWNX_Funcs.SetEventHandler(NWObject.MODULE, ModuleScripts.OnClientExit, "soo_mod_leave");
+        NWNX_Funcs.SetEventHandler(NWObject.MODULE, ModuleScripts.OnPlayerCancelCutscene, "soo_mod_cutscene");
+        NWNX_Funcs.SetEventHandler(NWObject.MODULE, ModuleScripts.OnHeartbeat, "soo_mod_hb");
+        NWNX_Funcs.SetEventHandler(NWObject.MODULE, ModuleScripts.OnModuleLoad, "soo_mod_load");
+        NWNX_Funcs.SetEventHandler(NWObject.MODULE, ModuleScripts.OnPlayerDeath, "soo_mod_death");
+        NWNX_Funcs.SetEventHandler(NWObject.MODULE, ModuleScripts.OnPlayerDying, "soo_mod_dying");
+        NWNX_Funcs.SetEventHandler(NWObject.MODULE, ModuleScripts.OnEquipItem, "soo_mod_equip");
+        NWNX_Funcs.SetEventHandler(NWObject.MODULE, ModuleScripts.OnPlayerLevelUp, "soo_mod_level");
+        NWNX_Funcs.SetEventHandler(NWObject.MODULE, ModuleScripts.OnRespawnButtonPressed, "soo_mod_respawn");
+        NWNX_Funcs.SetEventHandler(NWObject.MODULE, ModuleScripts.OnPlayerRest, "soo_mod_rest");
+        NWNX_Funcs.SetEventHandler(NWObject.MODULE, ModuleScripts.OnUnequipItem, "soo_mod_unequip");
+        NWNX_Funcs.SetEventHandler(NWObject.MODULE, ModuleScripts.OnLoseItem, "soo_mod_unacquir");
+        NWNX_Funcs.SetEventHandler(NWObject.MODULE, ModuleScripts.OnUserDefinedEvent, "soo_mod_userdef");
     }
 
     private void AddGlobalEventHandlers()

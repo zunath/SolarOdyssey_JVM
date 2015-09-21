@@ -27,45 +27,22 @@ public class PlayerEntity {
     private float locationOrientation;
     @Column(name="CreateTimestamp")
     private Date createTimestamp;
-    @Column(name="InfectionCap")
-    private int infectionCap;
-    @Column(name="CurrentInfection")
-    private int currentInfection;
-    @Column(name="InfectionRemovalTick")
-    private int infectionRemovalTick;
-    @Column(name="MaxHunger")
-    private int maxHunger;
-    @Column(name="CurrentHunger")
-    private int currentHunger;
-    @Column(name="CurrentHungerTick")
-    private int currentHungerTick;
-    @Column(name = "UnallocatedSP")
-    private int unallocatedSP;
     @Column(name = "Level")
     private int level;
     @Column(name = "Experience")
     private int experience;
-    @Column(name ="NextSPResetDate")
-    private Date nextSPResetDate;
-    @Column(name="NumberOfSPResets")
-    private int numberOfSPResets;
-    @Column(name = "ResetTokens")
-    private int resetTokens;
-    @Column(name = "NextResetTokenReceiveDate")
-    private Date nextResetTokenReceiveDate;
-    @Column(name="HPRegenerationAmount")
-    private int hpRegenerationAmount;
-    @Column(name="InventorySpaceBonus")
-    private int inventorySpaceBonus;
-    @Column(name="RegenerationTick")
-    private int regenerationTick;
-    @Column(name="RegenerationRate")
-    private int regenerationRate;
-    @Column(name="ZombieKillCount")
-    private int zombieKillCount;
     @Column(name = "VersionNumber")
     private int versionNumber;
-
+    @Column(name = "BindLocationAreaTag")
+    private String bindLocationAreaTag;
+    @Column(name = "BindLocationOrientation")
+    private float bindLocationOrientation;
+    @Column(name = "BindLocationX")
+    private float bindLocationX;
+    @Column(name = "BindLocationY")
+    private float bindLocationY;
+    @Column(name = "BindLocationZ")
+    private float bindLocationZ;
 
     public PlayerEntity()
     {
@@ -146,60 +123,6 @@ public class PlayerEntity {
         this.createTimestamp = _createTimestamp;
     }
 
-    public int getInfectionCap(){
-        return infectionCap;
-    }
-
-    public void setInfectionCap(int value)
-    {
-        infectionCap = value;
-    }
-
-    public int getMaxHunger() {
-        return maxHunger;
-    }
-
-    public void setMaxHunger(int maxHunger) {
-        this.maxHunger = maxHunger;
-    }
-
-    public int getCurrentHunger() {
-        return currentHunger;
-    }
-
-    public void setCurrentHunger(int currentHunger) {
-        if(currentHunger < 0) currentHunger = 0;
-
-        this.currentHunger = currentHunger;
-    }
-
-    public int getInfectionRemovalTick() {
-        return infectionRemovalTick;
-    }
-
-    public void setInfectionRemovalTick(int infectionRemovalTick) {
-        this.infectionRemovalTick = infectionRemovalTick;
-    }
-
-    public int getCurrentInfection() {
-        return currentInfection;
-    }
-
-    public void setCurrentInfection(int currentInfection) {
-        if(currentInfection < 0) currentInfection = 0;
-        else if(currentInfection > infectionCap) currentInfection = infectionCap;
-
-        this.currentInfection = currentInfection;
-    }
-
-    public int getUnallocatedSP() {
-        return unallocatedSP;
-    }
-
-    public void setUnallocatedSP(int unallocatedSP) {
-        this.unallocatedSP = unallocatedSP;
-    }
-
     public int getLevel() {
         return level;
     }
@@ -216,69 +139,6 @@ public class PlayerEntity {
         this.experience = experience;
     }
 
-    public Date getNextSPResetDate() {
-        return nextSPResetDate;
-    }
-
-    public void setNextSPResetDate(Date nextSPResetDate) {
-        this.nextSPResetDate = nextSPResetDate;
-    }
-
-    public int getNumberOfSPResets() {
-        return numberOfSPResets;
-    }
-
-    public void setNumberOfSPResets(int numberOfSPResets) {
-        this.numberOfSPResets = numberOfSPResets;
-    }
-
-    public int getHpRegenerationAmount() {
-        return hpRegenerationAmount;
-    }
-
-    public void setHpRegenerationAmount(int hpRegenerationAmount) {
-        this.hpRegenerationAmount = hpRegenerationAmount;
-    }
-
-    public int getInventorySpaceBonus() {
-        return inventorySpaceBonus;
-    }
-
-    public void setInventorySpaceBonus(int inventorySpaceBonus) {
-        this.inventorySpaceBonus = inventorySpaceBonus;
-    }
-
-    public int getRegenerationTick() {
-        return regenerationTick;
-    }
-
-    public void setRegenerationTick(int regenerationTick) {
-        this.regenerationTick = regenerationTick;
-    }
-
-    public int getCurrentHungerTick() {
-        return currentHungerTick;
-    }
-
-    public void setCurrentHungerTick(int currentHungerTick) {
-        this.currentHungerTick = currentHungerTick;
-    }
-
-    public int getRegenerationRate() {
-        return regenerationRate;
-    }
-
-    public void setRegenerationRate(int regenerationRate) {
-        this.regenerationRate = regenerationRate;
-    }
-
-    public int getZombieKillCount() {
-        return zombieKillCount;
-    }
-
-    public void setZombieKillCount(int zombieKillCount) {
-        this.zombieKillCount = zombieKillCount;
-    }
 
     public int getVersionNumber() {
         return versionNumber;
@@ -288,19 +148,43 @@ public class PlayerEntity {
         this.versionNumber = versionNumber;
     }
 
-    public int getResetTokens() {
-        return resetTokens;
+    public String getBindLocationAreaTag() {
+        return bindLocationAreaTag;
     }
 
-    public void setResetTokens(int resetTokens) {
-        this.resetTokens = resetTokens;
+    public void setBindLocationAreaTag(String bindLocationAreaTag) {
+        this.bindLocationAreaTag = bindLocationAreaTag;
     }
 
-    public Date getNextResetTokenReceiveDate() {
-        return nextResetTokenReceiveDate;
+    public float getBindLocationOrientation() {
+        return bindLocationOrientation;
     }
 
-    public void setNextResetTokenReceiveDate(Date nextResetTokenReceiveDate) {
-        this.nextResetTokenReceiveDate = nextResetTokenReceiveDate;
+    public void setBindLocationOrientation(float bindLocationOrientation) {
+        this.bindLocationOrientation = bindLocationOrientation;
+    }
+
+    public float getBindLocationX() {
+        return bindLocationX;
+    }
+
+    public void setBindLocationX(float bindLocationX) {
+        this.bindLocationX = bindLocationX;
+    }
+
+    public float getBindLocationY() {
+        return bindLocationY;
+    }
+
+    public void setBindLocationY(float bindLocationY) {
+        this.bindLocationY = bindLocationY;
+    }
+
+    public float getBindLocationZ() {
+        return bindLocationZ;
+    }
+
+    public void setBindLocationZ(float bindLocationZ) {
+        this.bindLocationZ = bindLocationZ;
     }
 }

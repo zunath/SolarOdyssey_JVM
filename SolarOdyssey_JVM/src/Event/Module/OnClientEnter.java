@@ -13,7 +13,7 @@ import org.nwnx.nwnx2.jvm.constants.DamagePower;
 import org.nwnx.nwnx2.jvm.constants.DamageType;
 import org.nwnx.nwnx2.jvm.constants.Duration;
 import org.nwnx.nwnx2.jvm.constants.DurationType;
-import System.PlayerAuthorizationSystem;
+import GameSystems.PlayerAuthorizationSystem;
 
 public class OnClientEnter implements IScriptEventHandler {
     @Override

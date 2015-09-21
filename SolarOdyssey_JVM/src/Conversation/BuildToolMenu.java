@@ -7,7 +7,7 @@ import Entities.PCTerritoryFlagStructureEntity;
 import Enumerations.StructurePermission;
 import GameObject.PlayerGO;
 import Helper.ColorToken;
-import System.StructureSystem;
+import GameSystems.StructureSystem;
 import org.nwnx.nwnx2.jvm.NWLocation;
 import org.nwnx.nwnx2.jvm.NWObject;
 import org.nwnx.nwnx2.jvm.NWScript;

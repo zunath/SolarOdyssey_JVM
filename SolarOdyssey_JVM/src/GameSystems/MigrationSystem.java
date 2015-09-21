@@ -1,4 +1,4 @@
-package System;
+package GameSystems;
 
 import Common.Constants;
 import Entities.PCMigrationEntity;

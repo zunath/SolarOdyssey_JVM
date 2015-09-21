@@ -35,7 +35,7 @@ public class ActionTaken implements IScriptEventHandler {
                 IDialogHandler script = (IDialogHandler) scriptClass.newInstance();
                 script.DoAction(oPC, dialog.getCurrentPageName(), responseID + 1);
             } catch (Exception ex) {
-                ErrorHelper.HandleException(ex, "ActionTaken was unable to execute class method: contagionJVM.Dialog.Conversation_\" + dialog.getActiveDialogName() + \".DoAction()");
+                ErrorHelper.HandleException(ex, "ActionTaken was unable to execute class method: Conversation.\" + dialog.getActiveDialogName() + \".DoAction()");
             }
         }
 
