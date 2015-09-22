@@ -25,14 +25,8 @@ public class StartUp {
      */
     @SuppressWarnings("unused")
     private static void init() {
-
-        System.out.println("Start scheduler add");
-
         Scheduler.addSchedulerListener(e);
-        System.out.println("Start dataaccess init");
         DataAccess.Initialize();
-
-        System.out.println("register object handler");
 		/* Add some default handlers that don't do any
 		 * custom wrapping at all.
 		 */
@@ -43,22 +37,17 @@ public class StartUp {
             }
         });
 
-        System.out.println("Register effect handler");
-
         NWEffect.registerEffectHandler(new NWEffect.EffectHandler() {
             public NWEffect handleEffectClass(NWEffect eff) {
                 return eff;
             }
         });
 
-
-        System.out.println("register item prop handler");
         NWItemProperty.registerItemPropertyHandler(new NWItemProperty.ItemPropertyHandler() {
             public NWItemProperty handleItemPropertyClass(NWItemProperty prp) {
                 return prp;
             }
         });
-
     }
 
     /**
