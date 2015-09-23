@@ -1,6 +1,7 @@
 package GameObject;
 
 import Common.Constants;
+import Data.Repository.PCMigrationRepository;
 import Entities.PlayerEntity;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
@@ -59,6 +60,8 @@ public class PlayerGO {
     {
         NWLocation location = NWScript.getLocation(_pc);
         NWLocation bindLocation = NWScript.getLocation(NWScript.getWaypointByTag("SOO_START_POINT"));
+        PCMigrationRepository migrationRepo = new PCMigrationRepository();
+        int latestMigrationID = migrationRepo.GetLatestMigrationID();
 
         PlayerEntity entity = new PlayerEntity();
         entity.setPCID(getUUID());
@@ -72,7 +75,7 @@ public class PlayerGO {
         entity.setCreateTimestamp(new Date());
         entity.setLevel(1);
         entity.setExperience(0);
-        entity.setVersionNumber(Constants.PlayerVersionNumber);
+        entity.setVersionNumber(latestMigrationID);
         entity.setBindLocationX(bindLocation.getX());
         entity.setBindLocationY(bindLocation.getY());
         entity.setBindLocationZ(bindLocation.getZ());

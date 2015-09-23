@@ -25,7 +25,6 @@ public class MigrationSystem {
     {
         if(!NWScript.getIsPC(oPC) ||
                 NWScript.getIsDM(oPC) ||
-                NWScript.getLocalInt(oPC, "MIGRATION_SYSTEM_LOGGED_IN_ONCE") == 1 ||
                 !NWScript.getTag(NWScript.getArea(oPC)).equals("ooc_area")) return;
         PerformMigration(oPC);
     }
@@ -37,6 +36,7 @@ public class MigrationSystem {
         PlayerRepository playerRepo = new PlayerRepository();
         PCMigrationRepository migrationRepo = new PCMigrationRepository();
         PlayerEntity entity = playerRepo.getByUUID(pcGO.getUUID());
+        int latestMigrationID = migrationRepo.GetLatestMigrationID();
 
         // This piece of code migrates characters from MZS3 to the new version's database structure.
         if(entity == null &&
@@ -48,7 +48,7 @@ public class MigrationSystem {
             playerRepo.save(entity);
         }
 
-        for(int version = entity.getVersionNumber() + 1; version <= Constants.PlayerVersionNumber; version++)
+        for(int version = entity.getVersionNumber() + 1; version <= latestMigrationID; version++)
         {
             HashMap<String, PCMigrationItemEntity> itemMap = new HashMap<>();
             ArrayList<Integer> stripItemList = new ArrayList<>();
