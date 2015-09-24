@@ -27,10 +27,6 @@ public class PlayerEntity {
     private float locationOrientation;
     @Column(name="CreateTimestamp")
     private Date createTimestamp;
-    @Column(name = "Level")
-    private int level;
-    @Column(name = "Experience")
-    private int experience;
     @Column(name = "VersionNumber")
     private int versionNumber;
     @Column(name = "BindLocationAreaTag")
@@ -43,6 +39,8 @@ public class PlayerEntity {
     private float bindLocationY;
     @Column(name = "BindLocationZ")
     private float bindLocationZ;
+    @Column(name = "ActiveClassID")
+    private int activeClassID;
 
     public PlayerEntity()
     {
@@ -123,23 +121,6 @@ public class PlayerEntity {
         this.createTimestamp = _createTimestamp;
     }
 
-    public int getLevel() {
-        return level;
-    }
-
-    public void setLevel(int level) {
-        this.level = level;
-    }
-
-    public int getExperience() {
-        return experience;
-    }
-
-    public void setExperience(int experience) {
-        this.experience = experience;
-    }
-
-
     public int getVersionNumber() {
         return versionNumber;
     }
@@ -186,5 +167,13 @@ public class PlayerEntity {
 
     public void setBindLocationZ(float bindLocationZ) {
         this.bindLocationZ = bindLocationZ;
+    }
+
+    public int getActiveClassID() {
+        return activeClassID;
+    }
+
+    public void setActiveClassID(int activeClassID) {
+        this.activeClassID = activeClassID;
     }
 }

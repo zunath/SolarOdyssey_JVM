@@ -77,6 +77,8 @@ public class DataAccess {
         _configuration.addAnnotatedClass(AuthorizedDMEntity.class);
         _configuration.addAnnotatedClass(BaseItemTypeEntity.class);
         _configuration.addAnnotatedClass(BuildPrivacyEntity.class);
+        _configuration.addAnnotatedClass(CharacterClassEntity.class);
+        _configuration.addAnnotatedClass(ClassLevelEntity.class);
         _configuration.addAnnotatedClass(ConstructionSiteEntity.class);
         _configuration.addAnnotatedClass(CraftBlueprintCategoryEntity.class);
         _configuration.addAnnotatedClass(CraftBlueprintEntity.class);
@@ -88,6 +90,7 @@ public class DataAccess {
         _configuration.addAnnotatedClass(KeyItemEntity.class);
         _configuration.addAnnotatedClass(PCAuthorizedCDKeyEntity.class);
         _configuration.addAnnotatedClass(PCBlueprintEntity.class);
+        _configuration.addAnnotatedClass(PCClassEntity.class);
         _configuration.addAnnotatedClass(PCCraftEntity.class);
         _configuration.addAnnotatedClass(PCKeyItemEntity.class);
         _configuration.addAnnotatedClass(PCMigrationEntity.class);
@@ -100,6 +103,7 @@ public class DataAccess {
         _configuration.addAnnotatedClass(PCTerritoryFlagStructureItemEntity.class);
         _configuration.addAnnotatedClass(PlayerEntity.class);
         _configuration.addAnnotatedClass(PortraitEntity.class);
+        _configuration.addAnnotatedClass(ServerConfigurationEntity.class);
         _configuration.addAnnotatedClass(StorageContainerEntity.class);
         _configuration.addAnnotatedClass(StorageItemEntity.class);
         _configuration.addAnnotatedClass(StructureCategoryEntity.class);

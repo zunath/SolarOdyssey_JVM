@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Table(name = "CharacterClasses")
 public class CharacterClassEntity {
     @Id
-    @Column(name = "ConstructionSiteID")
+    @Column(name = "CharacterClassID")
     private int characterClassID;
 
     @Column(name = "Callsign")

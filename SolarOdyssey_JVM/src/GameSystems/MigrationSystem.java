@@ -21,6 +21,33 @@ import java.util.HashMap;
 
 public class MigrationSystem {
 
+    public static void OnModuleEnter()
+    {
+        InitializeNewCharacter();
+    }
+
+    private static void InitializeNewCharacter()
+    {
+        NWObject oPC = NWScript.getEnteringObject();
+        if(!NWScript.getIsPC(oPC) || NWScript.getIsDM(oPC)) return;
+
+        PlayerGO pcGO = new PlayerGO(oPC);
+        NWObject databaseItem = pcGO.GetDatabaseItem();
+
+        if(!NWScript.getIsObjectValid(databaseItem))
+        {
+            pcGO.destroyAllInventoryItems(false);
+            pcGO.destroyAllEquippedItems();
+
+            databaseItem = NWScript.createItemOnObject(Constants.PCDatabaseTag, oPC, 1, "");
+            PlayerRepository repo = new PlayerRepository();
+            PlayerEntity entity = pcGO.createEntity();
+            repo.save(entity);
+
+            NWScript.setLocalString(databaseItem, Constants.PCDatabaseTag, entity.getPCID());
+        }
+    }
+
     public static void OnAreaEnter(NWObject oPC)
     {
         if(!NWScript.getIsPC(oPC) ||

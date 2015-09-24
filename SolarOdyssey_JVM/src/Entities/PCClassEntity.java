@@ -5,17 +5,37 @@ import javax.persistence.*;
 @Entity
 @Table(name = "PCClasses")
 public class PCClassEntity {
-    private int playerClassID;
+
+    @Id
+    @Column(name = "PCClassID")
+    private int pcClassID;
+
+    @Column(name = "PlayerID")
+    private String playerID;
+
+    @Column(name = "CharacterClassID")
     private int characterClassID;
+
+    @Column(name = "LevelID")
     private int levelID;
+
+    @Column(name = "Experience")
     private int experience;
 
-    public int getPlayerClassID() {
-        return playerClassID;
+    public PCClassEntity(String playerID, int characterClassID, int levelID, int exp)
+    {
+        this.playerID = playerID;
+        this.characterClassID = characterClassID;
+        this.levelID = levelID;
+        this.experience = exp;
     }
 
-    public void setPlayerClassID(int playerClassID) {
-        this.playerClassID = playerClassID;
+    public String getPlayerID() {
+        return playerID;
+    }
+
+    public void setPlayerID(String playerID) {
+        this.playerID = playerID;
     }
 
     public int getCharacterClassID() {
@@ -41,4 +61,13 @@ public class PCClassEntity {
     public void setExperience(int experience) {
         this.experience = experience;
     }
+
+    public int getPcClassID() {
+        return pcClassID;
+    }
+
+    public void setPcClassID(int pcClassID) {
+        this.pcClassID = pcClassID;
+    }
+
 }
