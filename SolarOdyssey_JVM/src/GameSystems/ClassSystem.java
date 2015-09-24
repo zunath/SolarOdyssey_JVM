@@ -1,14 +1,16 @@
 package GameSystems;
 
+import Common.Constants;
 import Data.Repository.CharacterClassRepository;
+import Data.Repository.PlayerRepository;
 import Data.Repository.ServerConfigurationRepository;
-import Entities.ClassLevelEntity;
-import Entities.PCClassEntity;
-import Entities.ServerConfigurationEntity;
+import Entities.*;
 import GameObject.PlayerGO;
 import Helper.ColorToken;
+import NWNX.NWNX_Funcs;
 import org.nwnx.nwnx2.jvm.NWObject;
 import org.nwnx.nwnx2.jvm.NWScript;
+import org.nwnx.nwnx2.jvm.constants.Ability;
 
 import java.util.List;
 
@@ -27,6 +29,18 @@ public class ClassSystem
     public static void OnEnemyDeath(NWObject npc)
     {
         AwardPartyExperience(npc);
+    }
+
+    public static void ChangeClass(NWObject pc, int classID)
+    {
+        if(!NWScript.getIsPC(pc) || NWScript.getIsDM(pc)) return;
+        PlayerRepository repo = new PlayerRepository();
+        PlayerGO pcGO = new PlayerGO(pc);
+        PlayerEntity entity = repo.getByUUID(pcGO.getUUID());
+        entity.setActiveClassID(classID);
+        repo.save(entity);
+
+        ApplyClassStatChanges(pc);
     }
 
     public static void AwardPartyExperience(NWObject oNPC)
@@ -127,33 +141,69 @@ public class ClassSystem
         {
             switch (delta)
             {
-                case -4:
-                    exp = 200;
-                    break;
-                case -3:
-                    exp = 170;
-                    break;
-                case -2:
-                    exp = 140;
-                    break;
-                case -1:
-                    exp = 120;
-                    break;
-                case 0:
-                    exp = 100;
-                    break;
-                case 1:
-                    exp = 80;
-                    break;
-                case 2:
-                    exp = 50;
-                    break;
-                case 3:
-                    exp = 30;
-                    break;
+                case -4: exp = 200; break;
+                case -3: exp = 170; break;
+                case -2: exp = 140; break;
+                case -1: exp = 120; break;
+                case 0:  exp = 100; break;
+                case 1:  exp = 80;  break;
+                case 2:  exp = 50;  break;
+                case 3:  exp = 30;  break;
             }
         }
 
         return exp;
     }
+
+    private static void ApplyClassStatChanges(NWObject oPC)
+    {
+        if(NWScript.getIsDM(oPC) || !NWScript.getIsPC(oPC)) return;
+        PlayerRepository playerRepo = new PlayerRepository();
+        CharacterClassRepository classRepo = new CharacterClassRepository();
+        PlayerGO pcGO = new PlayerGO(oPC);
+        PlayerEntity pcEntity = playerRepo.getByUUID(pcGO.getUUID());
+        PCClassEntity pcClass = classRepo.GetActiveClass(pcGO.getUUID());
+        ClassStatEntity stat = classRepo.GetClassStat(pcClass.getCharacterClassID(), pcClass.getLevelID());
+
+        // NWN Stats
+        ApplyHitPoints(oPC, stat.getHitPoints());
+        NWNX_Funcs.SetAbilityScore(oPC, Ability.CHARISMA, stat.getCharisma());
+        NWNX_Funcs.SetAbilityScore(oPC, Ability.CONSTITUTION, stat.getConstitution());
+        NWNX_Funcs.SetAbilityScore(oPC, Ability.DEXTERITY, stat.getDexterity());
+        NWNX_Funcs.SetAbilityScore(oPC, Ability.INTELLIGENCE, stat.getIntelligence());
+        NWNX_Funcs.SetAbilityScore(oPC, Ability.STRENGTH, stat.getStrength());
+        NWNX_Funcs.SetAbilityScore(oPC, Ability.WISDOM, stat.getWisdom());
+
+        // Database stats
+        pcEntity.setCurrentEssence(stat.getEssence());
+
+        playerRepo.save(pcEntity);
+    }
+
+    private static void ApplyHitPoints(NWObject oPC, int newHitPoints)
+    {
+        int maxHitPoints = Constants.MaxNWNLevels * Constants.MaxNWNHPPerLevel;
+        if(newHitPoints > maxHitPoints) newHitPoints = maxHitPoints;
+
+        for(int level = 1; level <= Constants.MaxNWNLevels; level++)
+        {
+            if(level == 1)
+                NWNX_Funcs.SetMaxHitPointsByLevel(oPC, level, 1);
+            else
+                NWNX_Funcs.SetMaxHitPointsByLevel(oPC, level, 0);
+        }
+
+        int applyToLevel = 1;
+        while(newHitPoints > Constants.MaxNWNHPPerLevel)
+        {
+            NWNX_Funcs.SetMaxHitPointsByLevel(oPC, applyToLevel, Constants.MaxNWNHPPerLevel);
+
+            applyToLevel++;
+            newHitPoints -= Constants.MaxNWNHPPerLevel;
+        }
+        // Apply leftover HP to next level.
+        NWNX_Funcs.SetMaxHitPointsByLevel(oPC, applyToLevel, newHitPoints);
+
+    }
+
 }

@@ -7,6 +7,7 @@ import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Property;
 import org.hibernate.criterion.Restrictions;
+
 import java.util.List;
 
 public class CharacterClassRepository {
@@ -48,6 +49,22 @@ public class CharacterClassRepository {
                     .uniqueResult();
             return entity.getCharacterClassID();
         }
+    }
+
+    public ClassStatEntity GetClassStat(int characterClassID, int levelID)
+    {
+        ClassStatEntity entity;
+
+        try(DataContext context = new DataContext())
+        {
+            entity = (ClassStatEntity)context.getSession()
+                    .createCriteria(ClassStatEntity.class)
+                    .add(Restrictions.eq("characterClassID", characterClassID))
+                    .add(Restrictions.eq("levelID", levelID))
+                    .uniqueResult();
+        }
+
+        return entity;
     }
 
     public CharacterClassEntity GetCharacterClass(int characterClassID)

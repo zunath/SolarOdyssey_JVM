@@ -15,6 +15,8 @@ public class PlayerEntity {
     private String characterName;
     @Column(name="HitPoints")
     private int hitPoints;
+    @Column(name = "CurrentEssence")
+    private int currentEssence;
     @Column(name="LocationAreaTag")
     private String locationAreaTag;
     @Column(name="LocationX")
@@ -175,5 +177,13 @@ public class PlayerEntity {
 
     public void setActiveClassID(int activeClassID) {
         this.activeClassID = activeClassID;
+    }
+
+    public int getCurrentEssence() {
+        return currentEssence;
+    }
+
+    public void setCurrentEssence(int currentEssence) {
+        this.currentEssence = currentEssence;
     }
 }
