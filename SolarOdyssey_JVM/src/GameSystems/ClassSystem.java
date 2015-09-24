@@ -95,9 +95,17 @@ public class ClassSystem
             if(pcClass.getLevelID() >= config.getMaxLevel() &&
                exp > classLevels.get(pcClass.getLevelID()-1).getExperienceRequired())
             {
+                exp = classLevels.get(pcClass.getLevelID()-1).getExperienceRequired()-1;
+            }
+
+            while(exp > classLevels.get(pcClass.getLevelID()-1).getExperienceRequired())
+            {
                 pcClass.setLevelID(pcClass.getLevelID()+1);
                 NWScript.floatingTextStringOnCreature(NWScript.getName(player, false) + " attains level " + pcClass.getLevelID() + "!", player, true);
+                exp -= classLevels.get(pcClass.getLevelID()-1).getExperienceRequired();
             }
+
+            pcClass.setExperience(exp);
             classRepo.Save(pcClass);
         }
     }

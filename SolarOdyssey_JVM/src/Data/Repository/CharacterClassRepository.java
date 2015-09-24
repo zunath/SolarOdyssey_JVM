@@ -19,7 +19,7 @@ public class CharacterClassRepository {
         {
             PlayerEntity player = (PlayerEntity)context.getSession()
                     .createCriteria(PlayerEntity.class)
-                    .add(Restrictions.eq("playerID", uuid)).uniqueResult();
+                    .add(Restrictions.eq("pcID", uuid)).uniqueResult();
 
             entity = (PCClassEntity)context.getSession()
                     .createCriteria(PCClassEntity.class)

@@ -8,6 +8,7 @@ public class PCClassEntity {
 
     @Id
     @Column(name = "PCClassID")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int pcClassID;
 
     @Column(name = "PlayerID")
@@ -21,6 +22,10 @@ public class PCClassEntity {
 
     @Column(name = "Experience")
     private int experience;
+
+    public PCClassEntity()
+    {
+    }
 
     public PCClassEntity(String playerID, int characterClassID, int levelID, int exp)
     {
