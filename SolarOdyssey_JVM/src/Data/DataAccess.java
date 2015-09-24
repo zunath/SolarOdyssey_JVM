@@ -78,6 +78,7 @@ public class DataAccess {
         _configuration.addAnnotatedClass(BaseItemTypeEntity.class);
         _configuration.addAnnotatedClass(BuildPrivacyEntity.class);
         _configuration.addAnnotatedClass(CharacterClassEntity.class);
+        _configuration.addAnnotatedClass(ClassAbilityEntity.class);
         _configuration.addAnnotatedClass(ClassLevelEntity.class);
         _configuration.addAnnotatedClass(ClassStatEntity.class);
         _configuration.addAnnotatedClass(ConstructionSiteEntity.class);
@@ -87,8 +88,10 @@ public class DataAccess {
         _configuration.addAnnotatedClass(CraftEntity.class);
         _configuration.addAnnotatedClass(CraftLevelEntity.class);
         _configuration.addAnnotatedClass(DMRoleEntity.class);
+        _configuration.addAnnotatedClass(FactionEntity.class);
         _configuration.addAnnotatedClass(KeyItemCategoryEntity.class);
         _configuration.addAnnotatedClass(KeyItemEntity.class);
+        _configuration.addAnnotatedClass(NPCEntity.class);
         _configuration.addAnnotatedClass(PCAuthorizedCDKeyEntity.class);
         _configuration.addAnnotatedClass(PCBlueprintEntity.class);
         _configuration.addAnnotatedClass(PCClassEntity.class);
@@ -98,6 +101,7 @@ public class DataAccess {
         _configuration.addAnnotatedClass(PCMigrationItemEntity.class);
         _configuration.addAnnotatedClass(PCOutfitEntity.class);
         _configuration.addAnnotatedClass(PCOverflowItemEntity.class);
+        _configuration.addAnnotatedClass(PCSystemVersionEntity.class);
         _configuration.addAnnotatedClass(PCTerritoryFlagEntity.class);
         _configuration.addAnnotatedClass(PCTerritoryFlagPermissionEntity.class);
         _configuration.addAnnotatedClass(PCTerritoryFlagStructureEntity.class);

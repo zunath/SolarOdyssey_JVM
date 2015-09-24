@@ -93,6 +93,19 @@ public class CharacterClassRepository {
         }
     }
 
+    public List<ClassAbilityEntity> GetClassAbilities(int characterClassID, int levelID)
+    {
+        try(DataContext context = new DataContext())
+        {
+            Criteria criteria = context.getSession()
+                    .createCriteria(ClassAbilityEntity.class)
+                    .add(Restrictions.eq("characterClassID", characterClassID))
+                    .add(Restrictions.le("levelID", levelID));
+
+            return criteria.list();
+        }
+    }
+
     public void Save(Object entity)
     {
         try(DataContext context = new DataContext())

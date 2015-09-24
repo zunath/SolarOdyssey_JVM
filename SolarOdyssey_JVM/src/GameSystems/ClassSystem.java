@@ -2,9 +2,11 @@ package GameSystems;
 
 import Common.Constants;
 import Data.Repository.CharacterClassRepository;
+import Data.Repository.PCSystemVersionRepository;
 import Data.Repository.PlayerRepository;
 import Data.Repository.ServerConfigurationRepository;
 import Entities.*;
+import GameObject.CreatureGO;
 import GameObject.PlayerGO;
 import Helper.ColorToken;
 import NWNX.NWNX_Funcs;
@@ -23,10 +25,21 @@ public class ClassSystem
 
     private static void HandleCharacterInitialization()
     {
-        // TODO: Initialize character
+        NWObject oPC = NWScript.getEnteringObject();
+        if(NWScript.getIsDM(oPC) || !NWScript.getIsPC(oPC)) return;
+        PlayerGO pcGO = new PlayerGO(oPC);
+        PCSystemVersionRepository repo = new PCSystemVersionRepository();
+        PCSystemVersionEntity entity = repo.GetPCSystemVersion(pcGO.getUUID());
+
+        if(entity.getClassSystemVersion() <= 0)
+        {
+            ApplyClassStatChanges(oPC);
+            entity.setClassSystemVersion(1);
+            repo.Save(entity);
+        }
     }
 
-    public static void OnEnemyDeath(NWObject npc)
+    public static void OnCreatureDeath(NWObject npc)
     {
         AwardPartyExperience(npc);
     }
@@ -58,9 +71,9 @@ public class ClassSystem
 
         NWObject area = NWScript.getArea(oNPC);
         NWObject[] party = NWScript.getFactionMembers(oPC, true);
+        CreatureGO creatureGO = new CreatureGO(oNPC);
 
         int membersInArea = 0;
-        int npcLevel = GetNPCLevel(oNPC);
         int partyLevel = pcClass.getLevelID();
 
         for(NWObject member : party)
@@ -79,7 +92,7 @@ public class ClassSystem
             }
         }
 
-        int exp = CalculateExperience(partyLevel, npcLevel) / membersInArea;
+        int exp = CalculateExperience(partyLevel, creatureGO.GetLevel()) / membersInArea;
         if(exp > config.getMaxExpAcquirable()) exp = config.getMaxExpAcquirable();
 
         for(NWObject member : party)
@@ -123,12 +136,6 @@ public class ClassSystem
             classRepo.Save(pcClass);
         }
     }
-
-    public static int GetNPCLevel(NWObject npc)
-    {
-        return 0; // TODO: Implement way to pull NPC level
-    }
-
 
     private static int CalculateExperience(int partyLevel, int enemyLevel)
     {
@@ -176,8 +183,11 @@ public class ClassSystem
 
         // Database stats
         pcEntity.setCurrentEssence(stat.getEssence());
-
         playerRepo.save(pcEntity);
+
+        // Feats
+        ApplyFeats(oPC, pcClass.getCharacterClassID(), pcClass.getLevelID());
+
     }
 
     private static void ApplyHitPoints(NWObject oPC, int newHitPoints)
@@ -204,6 +214,20 @@ public class ClassSystem
         // Apply leftover HP to next level.
         NWNX_Funcs.SetMaxHitPointsByLevel(oPC, applyToLevel, newHitPoints);
 
+    }
+
+    private static void ApplyFeats(NWObject oPC, int characterClassID, int level)
+    {
+        if(NWScript.getIsDM(oPC) || !NWScript.getIsPC(oPC) || level <= 0) return;
+        CharacterClassRepository repo = new CharacterClassRepository();
+        List<ClassAbilityEntity> abilities = repo.GetClassAbilities(characterClassID, level);
+
+        // TODO: Remove existing feats
+
+        for(ClassAbilityEntity ability : abilities)
+        {
+            NWNX_Funcs.AddKnownFeat(oPC, ability.getFeatID(), 1);
+        }
     }
 
 }
