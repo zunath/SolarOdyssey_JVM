@@ -79,6 +79,7 @@ public class DataAccess {
         _configuration.addAnnotatedClass(BuildPrivacyEntity.class);
         _configuration.addAnnotatedClass(CharacterClassEntity.class);
         _configuration.addAnnotatedClass(ClassLevelEntity.class);
+        _configuration.addAnnotatedClass(ClassStatEntity.class);
         _configuration.addAnnotatedClass(ConstructionSiteEntity.class);
         _configuration.addAnnotatedClass(CraftBlueprintCategoryEntity.class);
         _configuration.addAnnotatedClass(CraftBlueprintEntity.class);
