@@ -29,6 +29,9 @@ public class ConstructionSiteEntity {
     @Column(name = "LeatherRequired")
     private int leatherRequired;
 
+    @Column(name = "StoneRequired")
+    private int stoneRequired;
+
     @Column(name = "LocationAreaTag")
     private String locationAreaTag;
 
@@ -162,5 +165,13 @@ public class ConstructionSiteEntity {
 
     public void setPcTerritoryFlag(PCTerritoryFlagEntity pcTerritoryFlag) {
         this.pcTerritoryFlag = pcTerritoryFlag;
+    }
+
+    public int getStoneRequired() {
+        return stoneRequired;
+    }
+
+    public void setStoneRequired(int stoneRequired) {
+        this.stoneRequired = stoneRequired;
     }
 }

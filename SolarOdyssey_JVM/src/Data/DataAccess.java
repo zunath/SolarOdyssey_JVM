@@ -6,13 +6,9 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
+import org.ini4j.Ini;
 
-import java.io.IOException;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.List;
+import java.io.File;
 
 public class DataAccess {
     private static String _host;
@@ -24,36 +20,17 @@ public class DataAccess {
 
     public static void Initialize()
     {
-        Path path = Paths.get("./jvm/db-settings.txt");
-
         try
         {
-            List<String> rows = Files.readAllLines(path, Charset.defaultCharset());
-
-
-            for(String row : rows)
-            {
-                String[] parts = row.split("=");
-
-                switch (parts[0]) {
-                    case "host":
-                        _host = parts[1];
-                        break;
-                    case "username":
-                        _username = parts[1];
-                        break;
-                    case "password":
-                        _password = parts[1];
-                        break;
-                    case "schema":
-                        _schema = parts[1];
-                        break;
-                }
-
-            }
+            Ini ini = new Ini(new File("nwnx2.ini"));
+            _host = ini.get("ODBC2", "server");
+            _username = ini.get("ODBC2", "user");
+            _password = ini.get("ODBC2", "pass");
+            _schema = ini.get("ODBC2", "db");
         }
-        catch (IOException ex) {
-            ErrorHelper.HandleException(ex, "DataAccess.java");
+        catch (Exception ex)
+        {
+            ErrorHelper.HandleException(ex, "DataAccess Initialize()");
         }
 
         CreateSessionFactory();

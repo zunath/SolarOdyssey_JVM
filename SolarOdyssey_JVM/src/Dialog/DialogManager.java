@@ -72,7 +72,7 @@ public class DialogManager {
             Scheduler.assign(oPC, new Runnable() {
                 @Override
                 public void run() {
-                    NWScript.actionStartConversation(oTalkTo, "reo_dialog", true, false);
+                    NWScript.actionStartConversation(oTalkTo, "soo_dialog", true, false);
                 }
             });
         }

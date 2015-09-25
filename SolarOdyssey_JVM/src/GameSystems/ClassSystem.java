@@ -14,6 +14,7 @@ import org.nwnx.nwnx2.jvm.NWObject;
 import org.nwnx.nwnx2.jvm.NWScript;
 import org.nwnx.nwnx2.jvm.constants.Ability;
 import org.nwnx.nwnx2.jvm.constants.DurationType;
+import org.nwnx.nwnx2.jvm.constants.Feat;
 import org.nwnx.nwnx2.jvm.constants.VfxImp;
 
 import java.util.List;
@@ -227,12 +228,29 @@ public class ClassSystem
         CharacterClassRepository repo = new CharacterClassRepository();
         List<ClassAbilityEntity> abilities = repo.GetClassAbilities(characterClassID, level);
 
-        // TODO: Remove existing feats
+        for(int x = 0; x <= NWNX_Funcs.GetTotalKnownFeats(oPC); x++)
+        {
+            int featID = NWNX_Funcs.GetKnownFeat(oPC, x);
+            NWNX_Funcs.RemoveKnownFeat(oPC, featID);
+        }
 
+        ApplyStaticFeats(oPC);
         for(ClassAbilityEntity ability : abilities)
         {
             NWNX_Funcs.AddKnownFeat(oPC, ability.getFeatID(), 1);
         }
+    }
+
+    private static void ApplyStaticFeats(NWObject oPC)
+    {
+        NWNX_Funcs.AddKnownFeat(oPC, Feat.ARMOR_PROFICIENCY_LIGHT, 1);
+        NWNX_Funcs.AddKnownFeat(oPC, Feat.ARMOR_PROFICIENCY_MEDIUM, 1);
+        NWNX_Funcs.AddKnownFeat(oPC, Feat.ARMOR_PROFICIENCY_HEAVY, 1);
+        NWNX_Funcs.AddKnownFeat(oPC, Feat.SHIELD_PROFICIENCY, 1);
+        NWNX_Funcs.AddKnownFeat(oPC, Feat.WEAPON_PROFICIENCY_EXOTIC, 1);
+        NWNX_Funcs.AddKnownFeat(oPC, Feat.WEAPON_PROFICIENCY_MARTIAL, 1);
+        NWNX_Funcs.AddKnownFeat(oPC, Feat.WEAPON_PROFICIENCY_SIMPLE, 1);
+        NWNX_Funcs.AddKnownFeat(oPC, Feat.SPRING_ATTACK, 1);
     }
 
 }

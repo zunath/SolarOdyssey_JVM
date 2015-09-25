@@ -120,6 +120,14 @@ public class CraftRepository {
                     .add(Restrictions.eq("craftID", craftID))
                     .add(Restrictions.eq("level", level));
             entity = (CraftLevelEntity)criteria.uniqueResult();
+
+            if(entity == null)
+            {
+                entity = new CraftLevelEntity();
+                entity.setExperience(0);
+                entity.setCraftID(craftID);
+                entity.setLevel(level);
+            }
         }
 
         return entity;

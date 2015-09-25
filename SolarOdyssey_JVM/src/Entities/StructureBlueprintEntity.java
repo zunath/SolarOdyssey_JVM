@@ -46,6 +46,9 @@ public class StructureBlueprintEntity {
     @Column(name = "LeatherRequired")
     private int leatherRequired;
 
+    @Column(name = "StoneRequired")
+    private int stoneRequired;
+
     @Column(name = "ItemStorageCount")
     private int itemStorageCount;
 
@@ -181,5 +184,13 @@ public class StructureBlueprintEntity {
 
     public void setIsUseable(boolean isUseable) {
         this.isUseable = isUseable;
+    }
+
+    public int getStoneRequired() {
+        return stoneRequired;
+    }
+
+    public void setStoneRequired(int stoneRequired) {
+        this.stoneRequired = stoneRequired;
     }
 }
