@@ -14,6 +14,26 @@ public class AbilitySystem {
         AbilityRepository repo = new AbilityRepository();
         ClassAbilityEntity entity = repo.GetClassAbilityByFeatID(featID);
         if(entity == null) return;
+
+        if(entity.getCastingTime() > 0.0f)
+        {
+            CastSpell(entity);
+        }
+        else
+        {
+            ActivateAbility(entity);
+        }
+
+    }
+
+    private static void CastSpell(ClassAbilityEntity ability)
+    {
+
+    }
+
+    private static void ActivateAbility(ClassAbilityEntity ability)
+    {
+
     }
 
 }
