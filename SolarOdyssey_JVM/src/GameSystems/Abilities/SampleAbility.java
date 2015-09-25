@@ -1,6 +1,15 @@
 package GameSystems.Abilities;
 
-import GameSystems.Interfaces.IAbility;
+import Interfaces.IAbility;
 
 public class SampleAbility implements IAbility {
+    @Override
+    public void OnCasting() {
+
+    }
+
+    @Override
+    public void OnImpact() {
+
+    }
 }
