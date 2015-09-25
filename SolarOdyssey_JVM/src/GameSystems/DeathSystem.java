@@ -41,7 +41,11 @@ public class DeathSystem {
         PlayerEntity entity = repo.getByUUID(pcGO.getUUID());
         NWVector vector = NWScript.vector(entity.getBindLocationX(), entity.getBindLocationY(), entity.getBindLocationZ());
 
-        final NWLocation location = NWScript.location(pc, vector, entity.getBindLocationOrientation());
+        final NWLocation location =
+                entity.getBindLocationAreaTag().equals("") ?
+                    NWScript.getLocation(NWScript.getWaypointByTag("DEFAULT_RESPAWN_POINT")) :
+                    NWScript.location(pc, vector, entity.getBindLocationOrientation());
+
         NWScript.applyEffectToObject(DurationType.INSTANT, NWScript.effectResurrection(), pc, 0.0f);
         NWScript.applyEffectToObject(DurationType.INSTANT, NWScript.effectHeal(NWScript.getMaxHitPoints(pc)), pc, 0.0f);
 

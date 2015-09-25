@@ -11,8 +11,11 @@ public class ClassAbilityEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int classAbilityID;
 
-    @Column(name = "LevelID")
-    private int levelID;
+    @Column(name = "CharacterClassID")
+    private int characterClassID;
+
+    @Column(name = "ClassLevelID")
+    private int classLevelID;
 
     @Column(name = "FeatID")
     private int featID;
@@ -25,12 +28,12 @@ public class ClassAbilityEntity {
         this.classAbilityID = classAbilityID;
     }
 
-    public int getLevelID() {
-        return levelID;
+    public int getClassLevelID() {
+        return classLevelID;
     }
 
-    public void setLevelID(int levelID) {
-        this.levelID = levelID;
+    public void setClassLevelID(int classLevelID) {
+        this.classLevelID = classLevelID;
     }
 
     public int getFeatID() {
@@ -39,5 +42,13 @@ public class ClassAbilityEntity {
 
     public void setFeatID(int featID) {
         this.featID = featID;
+    }
+
+    public int getCharacterClassID() {
+        return characterClassID;
+    }
+
+    public void setCharacterClassID(int characterClassID) {
+        this.characterClassID = characterClassID;
     }
 }

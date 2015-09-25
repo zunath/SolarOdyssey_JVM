@@ -13,6 +13,8 @@ import NWNX.NWNX_Funcs;
 import org.nwnx.nwnx2.jvm.NWObject;
 import org.nwnx.nwnx2.jvm.NWScript;
 import org.nwnx.nwnx2.jvm.constants.Ability;
+import org.nwnx.nwnx2.jvm.constants.DurationType;
+import org.nwnx.nwnx2.jvm.constants.VfxImp;
 
 import java.util.List;
 
@@ -127,9 +129,12 @@ public class ClassSystem
 
             while(exp > classLevels.get(pcClass.getLevelID()-1).getExperienceRequired())
             {
+                exp -= classLevels.get(pcClass.getLevelID()-1).getExperienceRequired();
+
                 pcClass.setLevelID(pcClass.getLevelID()+1);
                 NWScript.floatingTextStringOnCreature(NWScript.getName(player, false) + " attains level " + pcClass.getLevelID() + "!", player, true);
-                exp -= classLevels.get(pcClass.getLevelID()-1).getExperienceRequired();
+
+                NWScript.applyEffectToObject(DurationType.INSTANT, NWScript.effectVisualEffect(VfxImp.HEALING_G, false), player, 0.0f);
             }
 
             pcClass.setExperience(exp);

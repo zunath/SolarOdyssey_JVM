@@ -100,7 +100,7 @@ public class CharacterClassRepository {
             Criteria criteria = context.getSession()
                     .createCriteria(ClassAbilityEntity.class)
                     .add(Restrictions.eq("characterClassID", characterClassID))
-                    .add(Restrictions.le("levelID", levelID));
+                    .add(Restrictions.le("classLevelID", levelID));
 
             return criteria.list();
         }
