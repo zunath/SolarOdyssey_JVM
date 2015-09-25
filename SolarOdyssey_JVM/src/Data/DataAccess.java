@@ -55,7 +55,7 @@ public class DataAccess {
         _configuration.addAnnotatedClass(BaseItemTypeEntity.class);
         _configuration.addAnnotatedClass(BuildPrivacyEntity.class);
         _configuration.addAnnotatedClass(CharacterClassEntity.class);
-        _configuration.addAnnotatedClass(ClassAbilityEntity.class);
+        _configuration.addAnnotatedClass(ClassFeatLevelEntity.class);
         _configuration.addAnnotatedClass(ClassLevelEntity.class);
         _configuration.addAnnotatedClass(ClassStatEntity.class);
         _configuration.addAnnotatedClass(ConstructionSiteEntity.class);

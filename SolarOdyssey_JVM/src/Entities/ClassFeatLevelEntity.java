@@ -3,13 +3,13 @@ package Entities;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "ClassAbilities")
-public class ClassAbilityEntity {
+@Table(name = "ClassFeatLevels")
+public class ClassFeatLevelEntity {
 
     @Id
-    @Column(name = "ClassAbilityID")
+    @Column(name = "ClassFeatLevelID")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int classAbilityID;
+    private int classFeatLevelID;
 
     @Column(name = "CharacterClassID")
     private int characterClassID;
@@ -20,12 +20,12 @@ public class ClassAbilityEntity {
     @Column(name = "FeatID")
     private int featID;
 
-    public int getClassAbilityID() {
-        return classAbilityID;
+    public int getClassFeatLevelID() {
+        return classFeatLevelID;
     }
 
-    public void setClassAbilityID(int classAbilityID) {
-        this.classAbilityID = classAbilityID;
+    public void setClassFeatLevelID(int classFeatLevelID) {
+        this.classFeatLevelID = classFeatLevelID;
     }
 
     public int getClassLevelID() {

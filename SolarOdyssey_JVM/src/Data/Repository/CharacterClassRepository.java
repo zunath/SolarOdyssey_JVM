@@ -30,7 +30,7 @@ public class CharacterClassRepository {
 
             if(entity == null)
             {
-                entity = new PCClassEntity(uuid, player.getActiveClassID(), 1, 0);
+                entity = new PCClassEntity(uuid, player.getActiveClassID() , 1, 0);
             }
         }
 
@@ -67,19 +67,15 @@ public class CharacterClassRepository {
         return entity;
     }
 
-    public CharacterClassEntity GetCharacterClass(int characterClassID)
+    public List<CharacterClassEntity> GetAllCharacterClasses()
     {
-        CharacterClassEntity entity;
-
         try(DataContext context = new DataContext())
         {
-            entity = (CharacterClassEntity)context.getSession()
-                    .createCriteria(CharacterClassEntity.class)
-                    .add(Restrictions.eq("characterClassID", characterClassID))
-                    .uniqueResult();
-        }
+            Criteria criteria = context.getSession()
+                    .createCriteria(CharacterClassEntity.class);
 
-        return entity;
+            return criteria.list();
+        }
     }
 
     public List<ClassLevelEntity> GetClassLevels()
@@ -93,12 +89,12 @@ public class CharacterClassRepository {
         }
     }
 
-    public List<ClassAbilityEntity> GetClassAbilities(int characterClassID, int levelID)
+    public List<ClassFeatLevelEntity> GetClassFeatLevels(int characterClassID, int levelID)
     {
         try(DataContext context = new DataContext())
         {
             Criteria criteria = context.getSession()
-                    .createCriteria(ClassAbilityEntity.class)
+                    .createCriteria(ClassFeatLevelEntity.class)
                     .add(Restrictions.eq("characterClassID", characterClassID))
                     .add(Restrictions.le("classLevelID", levelID));
 

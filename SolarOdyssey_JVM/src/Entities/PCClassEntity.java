@@ -14,14 +14,16 @@ public class PCClassEntity {
     @Column(name = "PlayerID")
     private String playerID;
 
-    @Column(name = "CharacterClassID")
-    private int characterClassID;
-
-    @Column(name = "LevelID")
-    private int levelID;
-
     @Column(name = "Experience")
     private int experience;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "CharacterClassID")
+    private CharacterClassEntity characterClass;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "LevelID")
+    private ClassLevelEntity classLevel;
 
     public PCClassEntity()
     {
@@ -30,9 +32,9 @@ public class PCClassEntity {
     public PCClassEntity(String playerID, int characterClassID, int levelID, int exp)
     {
         this.playerID = playerID;
-        this.characterClassID = characterClassID;
-        this.levelID = levelID;
         this.experience = exp;
+        this.setCharacterClass(new CharacterClassEntity());
+        getCharacterClass().setCharacterClassID(characterClassID);
     }
 
     public String getPlayerID() {
@@ -41,22 +43,6 @@ public class PCClassEntity {
 
     public void setPlayerID(String playerID) {
         this.playerID = playerID;
-    }
-
-    public int getCharacterClassID() {
-        return characterClassID;
-    }
-
-    public void setCharacterClassID(int characterClassID) {
-        this.characterClassID = characterClassID;
-    }
-
-    public int getLevelID() {
-        return levelID;
-    }
-
-    public void setLevelID(int levelID) {
-        this.levelID = levelID;
     }
 
     public int getExperience() {
@@ -75,4 +61,19 @@ public class PCClassEntity {
         this.pcClassID = pcClassID;
     }
 
+    public CharacterClassEntity getCharacterClass() {
+        return characterClass;
+    }
+
+    public void setCharacterClass(CharacterClassEntity characterClass) {
+        this.characterClass = characterClass;
+    }
+
+    public ClassLevelEntity getClassLevel() {
+        return classLevel;
+    }
+
+    public void setClassLevel(ClassLevelEntity classLevel) {
+        this.classLevel = classLevel;
+    }
 }

@@ -9,6 +9,7 @@ import Entities.*;
 import GameObject.CreatureGO;
 import GameObject.PlayerGO;
 import Helper.ColorToken;
+import Helper.MenuHelper;
 import NWNX.NWNX_Funcs;
 import org.nwnx.nwnx2.jvm.NWObject;
 import org.nwnx.nwnx2.jvm.NWScript;
@@ -77,7 +78,7 @@ public class ClassSystem
         CreatureGO creatureGO = new CreatureGO(oNPC);
 
         int membersInArea = 0;
-        int partyLevel = pcClass.getLevelID();
+        int partyLevel = pcClass.getClassLevel().getClassLevelID();
 
         for(NWObject member : party)
         {
@@ -85,10 +86,11 @@ public class ClassSystem
             {
                 PlayerGO memberGO = new PlayerGO(member);
                 PCClassEntity memberClass = repo.GetActiveClass(memberGO.getUUID());
+                ClassLevelEntity classLevel = memberClass.getClassLevel();
 
-                if(memberClass.getLevelID() > partyLevel)
+                if(classLevel.getClassLevelID() > partyLevel)
                 {
-                    partyLevel = memberClass.getLevelID();
+                    partyLevel = classLevel.getClassLevelID();
                 }
 
                 membersInArea++;
@@ -115,6 +117,7 @@ public class ClassSystem
         ServerConfigurationEntity config = ServerConfigurationRepository.GetServerConfiguration();
         CharacterClassRepository classRepo = new CharacterClassRepository();
         PCClassEntity pcClass = classRepo.GetActiveClass(playerGO.getUUID());
+        ClassLevelEntity classLevel = pcClass.getClassLevel();
         List<ClassLevelEntity> classLevels = classRepo.GetClassLevels();
 
         if(exp > 0)
@@ -122,18 +125,18 @@ public class ClassSystem
             NWScript.sendMessageToPC(player, ColorToken.Green() + "You earned class experience." + ColorToken.End());
             exp = pcClass.getExperience() + exp;
 
-            if(pcClass.getLevelID() >= config.getMaxLevel() &&
-               exp > classLevels.get(pcClass.getLevelID()-1).getExperienceRequired())
+            if(classLevel.getClassLevelID() >= config.getMaxLevel() &&
+               exp > classLevels.get(classLevel.getClassLevelID()-1).getExperienceRequired())
             {
-                exp = classLevels.get(pcClass.getLevelID()-1).getExperienceRequired()-1;
+                exp = classLevels.get(classLevel.getClassLevelID()-1).getExperienceRequired()-1;
             }
 
-            while(exp > classLevels.get(pcClass.getLevelID()-1).getExperienceRequired())
+            while(exp > classLevels.get(classLevel.getClassLevelID()-1).getExperienceRequired())
             {
-                exp -= classLevels.get(pcClass.getLevelID()-1).getExperienceRequired();
+                exp -= classLevels.get(classLevel.getClassLevelID()-1).getExperienceRequired();
 
-                pcClass.setLevelID(pcClass.getLevelID()+1);
-                NWScript.floatingTextStringOnCreature(NWScript.getName(player, false) + " attains level " + pcClass.getLevelID() + "!", player, true);
+                classLevel.setClassLevelID(classLevel.getClassLevelID() + 1);
+                NWScript.floatingTextStringOnCreature(NWScript.getName(player, false) + " attains level " + classLevel.getClassLevelID() + "!", player, true);
 
                 NWScript.applyEffectToObject(DurationType.INSTANT, NWScript.effectVisualEffect(VfxImp.HEALING_G, false), player, 0.0f);
             }
@@ -176,7 +179,11 @@ public class ClassSystem
         PlayerGO pcGO = new PlayerGO(oPC);
         PlayerEntity pcEntity = playerRepo.getByUUID(pcGO.getUUID());
         PCClassEntity pcClass = classRepo.GetActiveClass(pcGO.getUUID());
-        ClassStatEntity stat = classRepo.GetClassStat(pcClass.getCharacterClassID(), pcClass.getLevelID());
+        ClassLevelEntity classLevel = pcClass.getClassLevel();
+
+        ClassStatEntity stat = classRepo.GetClassStat(
+                pcClass.getCharacterClass().getCharacterClassID(),
+                classLevel.getClassLevelID());
 
         // NWN Stats
         ApplyHitPoints(oPC, stat.getHitPoints());
@@ -192,8 +199,7 @@ public class ClassSystem
         playerRepo.save(pcEntity);
 
         // Feats
-        ApplyFeats(oPC, pcClass.getCharacterClassID(), pcClass.getLevelID());
-
+        ApplyFeats(oPC, pcClass.getCharacterClass().getCharacterClassID(), classLevel.getClassLevelID());
     }
 
     private static void ApplyHitPoints(NWObject oPC, int newHitPoints)
@@ -226,7 +232,7 @@ public class ClassSystem
     {
         if(NWScript.getIsDM(oPC) || !NWScript.getIsPC(oPC) || level <= 0) return;
         CharacterClassRepository repo = new CharacterClassRepository();
-        List<ClassAbilityEntity> abilities = repo.GetClassAbilities(characterClassID, level);
+        List<ClassFeatLevelEntity> abilities = repo.GetClassFeatLevels(characterClassID, level);
 
         for(int x = 0; x <= NWNX_Funcs.GetTotalKnownFeats(oPC); x++)
         {
@@ -235,7 +241,7 @@ public class ClassSystem
         }
 
         ApplyStaticFeats(oPC);
-        for(ClassAbilityEntity ability : abilities)
+        for(ClassFeatLevelEntity ability : abilities)
         {
             NWNX_Funcs.AddKnownFeat(oPC, ability.getFeatID(), 1);
         }
@@ -251,6 +257,22 @@ public class ClassSystem
         NWNX_Funcs.AddKnownFeat(oPC, Feat.WEAPON_PROFICIENCY_MARTIAL, 1);
         NWNX_Funcs.AddKnownFeat(oPC, Feat.WEAPON_PROFICIENCY_SIMPLE, 1);
         NWNX_Funcs.AddKnownFeat(oPC, Feat.SPRING_ATTACK, 1);
+    }
+
+    public static String BuildMenuHeader(NWObject oPC)
+    {
+        PlayerGO pcGO = new PlayerGO(oPC);
+        CharacterClassRepository repo = new CharacterClassRepository();
+        PCClassEntity pcClass = repo.GetActiveClass(pcGO.getUUID());
+        CharacterClassEntity charClass = pcClass.getCharacterClass();
+        ClassLevelEntity classLevel = pcClass.getClassLevel();
+
+        String header = ColorToken.Green() + "Class Change Terminal" + ColorToken.End() + "\n\n";
+        header += "Active Class: " + charClass.getName() + " (" + charClass.getCallsign() + ")\n";
+        header += "Level: " + classLevel.getClassLevelID() + "\n";
+        header += "EXP: " + MenuHelper.BuildBar(pcClass.getExperience(), classLevel.getExperienceRequired(), 100) + "\n";
+
+        return header;
     }
 
 }
