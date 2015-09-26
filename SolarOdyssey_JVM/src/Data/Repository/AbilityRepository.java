@@ -15,7 +15,7 @@ public class AbilityRepository {
         {
             Criteria criteria = context.getSession()
                     .createCriteria(ClassAbilityEntity.class)
-                    .add(Restrictions.eq("", featID));
+                    .add(Restrictions.eq("featID", featID));
 
             entity = (ClassAbilityEntity)criteria.uniqueResult();
         }

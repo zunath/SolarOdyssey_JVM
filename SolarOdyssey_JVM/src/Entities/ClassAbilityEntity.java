@@ -10,6 +10,9 @@ public class ClassAbilityEntity {
     @Column(name = "ClassAbilityID")
     private int classAbilityID;
 
+    @Column(name = "Name")
+    private String name;
+
     @Column(name = "FeatID")
     private int featID;
 
@@ -20,10 +23,10 @@ public class ClassAbilityEntity {
     private String scriptClassName;
 
     @Column(name = "CastingTime")
-    private float CastingTime;
+    private int castingTime;
 
     @Column(name = "CooldownTime")
-    private float CooldownTime;
+    private int cooldownTime;
 
     public int getClassAbilityID() {
         return classAbilityID;
@@ -57,19 +60,27 @@ public class ClassAbilityEntity {
         this.scriptClassName = scriptClassName;
     }
 
-    public float getCastingTime() {
-        return CastingTime;
+    public int getCastingTime() {
+        return castingTime;
     }
 
-    public void setCastingTime(float castingTime) {
-        CastingTime = castingTime;
+    public void setCastingTime(int castingTime) {
+        this.castingTime = castingTime;
     }
 
-    public float getCooldownTime() {
-        return CooldownTime;
+    public int getCooldownTime() {
+        return cooldownTime;
     }
 
-    public void setCooldownTime(float cooldownTime) {
-        CooldownTime = cooldownTime;
+    public void setCooldownTime(int cooldownTime) {
+        this.cooldownTime = cooldownTime;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
