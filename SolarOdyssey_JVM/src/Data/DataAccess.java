@@ -68,6 +68,7 @@ public class DataAccess {
         _configuration.addAnnotatedClass(CraftLevelEntity.class);
         _configuration.addAnnotatedClass(DMRoleEntity.class);
         _configuration.addAnnotatedClass(FactionEntity.class);
+        _configuration.addAnnotatedClass(FactionRelationshipEntity.class);
         _configuration.addAnnotatedClass(KeyItemCategoryEntity.class);
         _configuration.addAnnotatedClass(KeyItemEntity.class);
         _configuration.addAnnotatedClass(NPCEntity.class);
@@ -75,6 +76,7 @@ public class DataAccess {
         _configuration.addAnnotatedClass(PCBlueprintEntity.class);
         _configuration.addAnnotatedClass(PCClassEntity.class);
         _configuration.addAnnotatedClass(PCCraftEntity.class);
+        _configuration.addAnnotatedClass(PCFactionReputationEntity.class);
         _configuration.addAnnotatedClass(PCKeyItemEntity.class);
         _configuration.addAnnotatedClass(PCMigrationEntity.class);
         _configuration.addAnnotatedClass(PCMigrationItemEntity.class);

@@ -24,13 +24,20 @@ public class CharacterClassRepository {
 
             entity = (PCClassEntity)context.getSession()
                     .createCriteria(PCClassEntity.class)
+                    .createAlias("characterClass", "c")
                     .add(Restrictions.eq("playerID", uuid))
-                    .add(Restrictions.eq("characterClassID", player.getActiveClassID()))
+                    .add(Restrictions.eq("c.characterClassID", player.getActiveClassID()))
                     .uniqueResult();
 
             if(entity == null)
             {
+                ClassLevelEntity level = (ClassLevelEntity)context.getSession()
+                        .createCriteria(ClassLevelEntity.class)
+                        .add(Restrictions.eq("classLevelID", 1))
+                        .uniqueResult();
+
                 entity = new PCClassEntity(uuid, player.getActiveClassID() , 1, 0);
+                entity.setClassLevel(level);
             }
         }
 

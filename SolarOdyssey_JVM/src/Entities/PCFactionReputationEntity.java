@@ -14,11 +14,12 @@ public class PCFactionReputationEntity {
     @Column(name = "PlayerID")
     private String playerID;
 
-    @Column(name = "FactionID")
-    private int factionID;
-
     @Column(name = "Reputation")
     private int reputation;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "FactionID")
+    private FactionEntity faction;
 
     public int getPcFactionReputationID() {
         return pcFactionReputationID;
@@ -36,19 +37,19 @@ public class PCFactionReputationEntity {
         this.playerID = playerID;
     }
 
-    public int getFactionID() {
-        return factionID;
-    }
-
-    public void setFactionID(int factionID) {
-        this.factionID = factionID;
-    }
-
     public int getReputation() {
         return reputation;
     }
 
     public void setReputation(int reputation) {
         this.reputation = reputation;
+    }
+
+    public FactionEntity getFaction() {
+        return faction;
+    }
+
+    public void setFaction(FactionEntity faction) {
+        this.faction = faction;
     }
 }

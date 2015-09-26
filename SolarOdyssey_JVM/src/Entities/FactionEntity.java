@@ -16,6 +16,9 @@ public class FactionEntity {
     @Column(name = "Description")
     private String description;
 
+    @Column(name = "DefaultPCReputation")
+    private int defaultPCReputation;
+
     public int getFactionID() {
         return factionID;
     }
@@ -38,5 +41,13 @@ public class FactionEntity {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public int getDefaultPCReputation() {
+        return defaultPCReputation;
+    }
+
+    public void setDefaultPCReputation(int defaultPCReputation) {
+        this.defaultPCReputation = defaultPCReputation;
     }
 }

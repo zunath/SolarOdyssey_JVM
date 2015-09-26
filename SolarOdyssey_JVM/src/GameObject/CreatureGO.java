@@ -27,6 +27,7 @@ public class CreatureGO {
 
         NWScript.setLocalInt(creature, "NPC_LEVEL", entity.getLevelID());
         NWScript.setLocalInt(creature, "NPC_ESSENCE", entity.getEssence());
+        NWScript.setLocalInt(creature, "FACTION_ID", entity.getFactionID());
 
         if(entity.getHitPoints() > 0)
             NWNX_Funcs.SetMaxHitPoints(creature, entity.getHitPoints());
@@ -48,4 +49,10 @@ public class CreatureGO {
     {
         return NWScript.getLocalInt(creature, "NPC_LEVEL");
     }
+
+    public int GetFactionID()
+    {
+        return NWScript.getLocalInt(creature, "FACTION_ID");
+    }
+
 }
