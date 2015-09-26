@@ -215,6 +215,16 @@ public class PlayerGO {
         return NWScript.getLocalInt(_pc, "IS_BUSY") == 1;
     }
 
+    public void setIsCastingSpell(boolean isCastingSpell)
+    {
+        NWScript.setLocalInt(_pc, "IS_CASTING_SPELL", isCastingSpell ? 1 : 0);
+    }
+
+    public boolean isCastingSpell()
+    {
+        return NWScript.getLocalInt(_pc, "IS_CASTING_SPELL") == 1;
+    }
+
     public void removeEffect(int effectType)
     {
         for(NWEffect effect : NWScript.getEffects(_pc))
