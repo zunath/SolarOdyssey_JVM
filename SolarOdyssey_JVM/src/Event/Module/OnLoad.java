@@ -2,6 +2,7 @@ package Event.Module;
 
 import Common.IScriptEventHandler;
 import GameSystems.AreaInstanceSystem;
+import GameSystems.FactionSystem;
 import GameSystems.StructureSystem;
 import NWNX.*;
 import org.nwnx.nwnx2.jvm.NWObject;
@@ -24,6 +25,7 @@ public class OnLoad implements IScriptEventHandler {
         NWScript.executeScript("fky_chat_modload", objSelf); // SIMTools and NWNX
         StructureSystem.OnModuleLoad(); // Structure System
         AreaInstanceSystem.OnModuleLoad();
+        FactionSystem.OnModuleLoad();
     }
 
 

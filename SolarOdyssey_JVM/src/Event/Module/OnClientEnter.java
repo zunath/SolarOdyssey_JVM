@@ -3,16 +3,13 @@ package Event.Module;
 import Common.IScriptEventHandler;
 import Data.Repository.ServerConfigurationRepository;
 import Entities.ServerConfigurationEntity;
-import GameSystems.ClassSystem;
-import GameSystems.MigrationSystem;
-import GameSystems.PersistentHPSystem;
+import GameSystems.*;
 import Helper.ColorToken;
 import org.nwnx.nwnx2.jvm.NWEffect;
 import org.nwnx.nwnx2.jvm.NWObject;
 import org.nwnx.nwnx2.jvm.NWScript;
 import org.nwnx.nwnx2.jvm.Scheduler;
 import org.nwnx.nwnx2.jvm.constants.Duration;
-import GameSystems.PlayerAuthorizationSystem;
 
 public class OnClientEnter implements IScriptEventHandler {
     @Override
@@ -29,6 +26,7 @@ public class OnClientEnter implements IScriptEventHandler {
         ApplyGhostwalk();
         PlayerAuthorizationSystem.OnModuleEnter();
         PersistentHPSystem.OnModuleEnter();
+        FactionSystem.OnModuleEnter();
     }
 
 

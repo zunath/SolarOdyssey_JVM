@@ -105,6 +105,38 @@ public class FactionRepository {
         return entities;
     }
 
+    public List<FactionEntity> GetAllFactions()
+    {
+        List<FactionEntity> entities;
+
+        try(DataContext context = new DataContext())
+        {
+            Criteria criteria = context.getSession()
+                    .createCriteria(FactionEntity.class);
+
+            entities = criteria.list();
+        }
+
+        return entities;
+    }
+
+    public List<PCFactionReputationEntity> GetAllPCFactionReputations(String uuid)
+    {
+        List<PCFactionReputationEntity> entities;
+
+        try(DataContext context = new DataContext())
+        {
+            Criteria criteria = context.getSession()
+                    .createCriteria(PCFactionReputationEntity.class)
+                    .add(Restrictions.eq("playerID", uuid));
+
+            entities = criteria.list();
+        }
+
+        return entities;
+
+    }
+
     public void Save(Object entity)
     {
         try(DataContext context = new DataContext())

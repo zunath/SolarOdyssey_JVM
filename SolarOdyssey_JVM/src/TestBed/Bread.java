@@ -1,6 +1,7 @@
 package TestBed;
 
 import Common.IScriptEventHandler;
+import GameSystems.FactionSystem;
 import org.nwnx.nwnx2.jvm.NWLocation;
 import org.nwnx.nwnx2.jvm.NWObject;
 import org.nwnx.nwnx2.jvm.NWScript;

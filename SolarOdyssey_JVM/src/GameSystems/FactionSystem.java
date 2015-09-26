@@ -10,6 +10,8 @@ import GameObject.CreatureGO;
 import GameObject.PlayerGO;
 import Helper.ColorToken;
 import NWNX.NWNX_Events;
+import NWNX.NWNX_Funcs;
+import org.nwnx.nwnx2.jvm.NWLocation;
 import org.nwnx.nwnx2.jvm.NWObject;
 import org.nwnx.nwnx2.jvm.NWScript;
 import org.nwnx.nwnx2.jvm.constants.ObjectType;
@@ -27,7 +29,10 @@ public class FactionSystem {
     public static void OnModuleExamine(NWObject objSelf)
     {
         NWObject target = NWNX_Events.GetEventTarget();
-        if(NWScript.getIsPC(target) || NWScript.getObjectType(target) != ObjectType.CREATURE) return;
+        if(NWScript.getIsPC(target) ||
+           NWScript.getObjectType(target) != ObjectType.CREATURE ||
+           NWScript.getIsDM(objSelf) ||
+           !NWScript.getIsPC(objSelf)) return;
 
         PlayerGO playerGO = new PlayerGO(objSelf);
         CreatureGO creatureGO = new CreatureGO(target);
@@ -75,9 +80,11 @@ public class FactionSystem {
                 {
                     PCFactionReputationEntity rep = reputations.get(rel.getRelationshipTowardsFactionID());
                     FactionEntity faction = rep.getFaction();
+                    int adjustmentAmount = 1;
 
                     if (rel.getRelationshipTypeID() == RelationshipType_Friend) {
-                        rep.setReputation(rep.getReputation() - (random.nextInt(3) + 1));
+                        adjustmentAmount = -(random.nextInt(3) + 1);
+                        rep.setReputation(rep.getReputation() + adjustmentAmount);
                         if (rep.getReputation() < ReputationMinimum) rep.setReputation(ReputationMinimum);
 
                         if (rep.getReputation() == ReputationMinimum)
@@ -86,7 +93,7 @@ public class FactionSystem {
                             NWScript.sendMessageToPC(pc, "Your reputation with " + faction.getName() + " decreased.");
                     }
                     else if (rel.getRelationshipTypeID() == RelationshipType_Enemy) {
-                        rep.setReputation(rep.getReputation() + 1);
+                        rep.setReputation(rep.getReputation() + adjustmentAmount);
                         if(rep.getReputation() > ReputationMaximum) rep.setReputation(ReputationMaximum);
 
                         if(rep.getReputation() == ReputationMaximum)
@@ -97,6 +104,7 @@ public class FactionSystem {
                     }
 
                     repo.Save(rep);
+                    AdjustNWNFactionStanding(pc, rep.getFaction().getFactionID(), adjustmentAmount);
                 }
             }
         }
@@ -116,4 +124,53 @@ public class FactionSystem {
 
         return description;
     }
+
+    public static void AdjustNWNFactionStanding(NWObject oPC, int factionID, int adjustment)
+    {
+        NWObject npc = NWScript.getObjectByTag("FACTION_" + factionID, 0);
+        NWScript.adjustReputation(oPC, npc, adjustment);
+    }
+
+    public static void OnModuleLoad()
+    {
+        FactionRepository repo = new FactionRepository();
+        List<FactionEntity> factions = repo.GetAllFactions();
+        NWLocation location = NWScript.getLocation(NWScript.getWaypointByTag("FACTION_NPC_WP"));
+
+        for(FactionEntity faction : factions)
+        {
+            NWObject npc = NWScript.createObject(ObjectType.CREATURE, "faction_npc", location, false, "FACTION_" + faction.getFactionID());
+            NWNX_Funcs.SetFactionId(npc, faction.getFactionID());
+            NWScript.setName(npc, "Faction Holder: " + faction.getName());
+        }
+    }
+
+    public static void OnModuleEnter()
+    {
+        NWObject oPC = NWScript.getEnteringObject();
+        if(NWScript.getIsDM(oPC) || !NWScript.getIsPC(oPC)) return;
+
+        PlayerGO pcGO = new PlayerGO(oPC);
+        FactionRepository repo = new FactionRepository();
+        List<FactionEntity> factions = repo.GetAllFactions();
+        HashMap<Integer, PCFactionReputationEntity> reps = new HashMap<>();
+        for(PCFactionReputationEntity rep : repo.GetAllPCFactionReputations(pcGO.getUUID()))
+            reps.put(rep.getFaction().getFactionID(), rep);
+
+        for(FactionEntity faction : factions)
+        {
+            NWObject factionNPC = NWScript.getObjectByTag("FACTION_" + faction.getFactionID(), 0);
+            NWScript.adjustReputation(oPC, factionNPC, -100);
+            PCFactionReputationEntity rep = reps.get(faction.getFactionID());
+
+            if(rep == null)
+                NWScript.adjustReputation(oPC, factionNPC, faction.getDefaultPCReputation());
+            else
+                NWScript.adjustReputation(oPC, factionNPC, rep.getReputation());
+
+
+        }
+
+    }
+
 }

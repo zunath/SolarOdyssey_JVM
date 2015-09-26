@@ -19,6 +19,9 @@ public class FactionEntity {
     @Column(name = "DefaultPCReputation")
     private int defaultPCReputation;
 
+    @Column(name = "NWNFactionID")
+    private int nwnFactionID;
+
     public int getFactionID() {
         return factionID;
     }
@@ -49,5 +52,13 @@ public class FactionEntity {
 
     public void setDefaultPCReputation(int defaultPCReputation) {
         this.defaultPCReputation = defaultPCReputation;
+    }
+
+    public int getNwnFactionID() {
+        return nwnFactionID;
+    }
+
+    public void setNwnFactionID(int nwnFactionID) {
+        this.nwnFactionID = nwnFactionID;
     }
 }
