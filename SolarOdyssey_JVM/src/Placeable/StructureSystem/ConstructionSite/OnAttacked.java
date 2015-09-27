@@ -66,11 +66,12 @@ public class OnAttacked implements IScriptEventHandler {
 
         StructureRepository repo = new StructureRepository();
         ConstructionSiteEntity entity = repo.GetConstructionSiteByID(constructionSiteID);
-        NWObject wood = NWScript.getItemPossessedBy(oPC, "reo_wood");
-        NWObject nails = NWScript.getItemPossessedBy(oPC, "reo_nails");
-        NWObject metal = NWScript.getItemPossessedBy(oPC, "reo_metal");
-        NWObject cloth = NWScript.getItemPossessedBy(oPC, "reo_cloth");
-        NWObject leather = NWScript.getItemPossessedBy(oPC, "reo_leather");
+        NWObject wood = NWScript.getItemPossessedBy(oPC, "soo_wood");
+        NWObject nails = NWScript.getItemPossessedBy(oPC, "soo_nails");
+        NWObject metal = NWScript.getItemPossessedBy(oPC, "soo_metal");
+        NWObject cloth = NWScript.getItemPossessedBy(oPC, "soo_cloth");
+        NWObject leather = NWScript.getItemPossessedBy(oPC, "soo_leather");
+        NWObject stone = NWScript.getItemPossessedBy(oPC, "soo_stone");
         boolean foundResource = false;
         String updateMessage;
 
@@ -109,6 +110,13 @@ public class OnAttacked implements IScriptEventHandler {
             updateMessage = "You need " + entity.getLeatherRequired() + " leather to complete this project.";
             foundResource = true;
         }
+        else if(entity.getStoneRequired() > 0 && !stone.equals(NWObject.INVALID))
+        {
+            entity.setStoneRequired(entity.getStoneRequired() - 1);
+            NWScript.destroyObject(stone, 0.0f);
+            updateMessage = "You need " + entity.getStoneRequired() + " stone to complete this project.";
+            foundResource = true;
+        }
         else
         {
             updateMessage = "You lack the necessary resources...\n\n";
@@ -117,6 +125,7 @@ public class OnAttacked implements IScriptEventHandler {
             if(entity.getMetalRequired() > 0) updateMessage += "Metal Required: " + entity.getMetalRequired() + "\n";
             if(entity.getClothRequired() > 0) updateMessage += "Cloth Required: " + entity.getClothRequired() + "\n";
             if(entity.getLeatherRequired() > 0) updateMessage += "Leather Required: " + entity.getLeatherRequired() + "\n";
+            if(entity.getStoneRequired() > 0) updateMessage += "Stone Required: " + entity.getStoneRequired() + "\n";
         }
 
         final String messageCopy = updateMessage;
@@ -131,7 +140,8 @@ public class OnAttacked implements IScriptEventHandler {
                 entity.getClothRequired() <= 0 &&
                 entity.getNailsRequired() <= 0 &&
                 entity.getMetalRequired() <= 0 &&
-                entity.getLeatherRequired() <= 0)
+                entity.getLeatherRequired() <= 0 &&
+                entity.getStoneRequired() <= 0)
         {
             StructureSystem.CompleteStructure(oSite);
         }
