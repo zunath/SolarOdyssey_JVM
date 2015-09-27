@@ -17,7 +17,7 @@ import org.nwnx.nwnx2.jvm.constants.ObjectType;
 import java.util.List;
 
 @SuppressWarnings("unused")
-public class ConstructionSiteMenu extends DialogBase implements IDialogHandler {
+public class ConstructionSite extends DialogBase implements IDialogHandler {
     @Override
     public PlayerDialog SetUp(NWObject oPC) {
         PlayerDialog dialog = new PlayerDialog();
