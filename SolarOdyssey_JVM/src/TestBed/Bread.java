@@ -2,6 +2,8 @@ package TestBed;
 
 import Common.IScriptEventHandler;
 import GameSystems.FactionSystem;
+import NWNX.NWNX_Events;
+import NWNX.NWNX_Funcs;
 import org.nwnx.nwnx2.jvm.NWLocation;
 import org.nwnx.nwnx2.jvm.NWObject;
 import org.nwnx.nwnx2.jvm.NWScript;
@@ -15,6 +17,8 @@ public class Bread implements IScriptEventHandler {
         NWLocation location = NWScript.getLocation(NWScript.getWaypointByTag("TEST_WP"));
 
         NWScript.createObject(ObjectType.CREATURE, "testzombie", location, false, "");
+
+
 
     }
 
