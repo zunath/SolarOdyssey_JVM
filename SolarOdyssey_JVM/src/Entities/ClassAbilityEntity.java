@@ -8,6 +8,7 @@ public class ClassAbilityEntity {
 
     @Id
     @Column(name = "ClassAbilityID")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int classAbilityID;
 
     @Column(name = "Name")
