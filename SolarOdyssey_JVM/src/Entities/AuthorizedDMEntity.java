@@ -9,6 +9,7 @@ public class AuthorizedDMEntity {
 
     @Id
     @Column(name="AuthorizedDMID")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int authorizedDMId;
 
     @Column(name="Name")
