@@ -31,7 +31,7 @@ public class CustomResMan {
         return var1;
     }
 
-    private static byte[] demandRes(String var0) {
+    private static byte[] demand(String var0) {
         Object var1 = null;
         Iterator var2 = handlers.iterator();
 

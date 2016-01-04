@@ -6,7 +6,65 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ffdf903-6348-4a54-8930-c206fc8e10bb" name="Default" comment="" />
+    <list default="true" id="7ffdf903-6348-4a54-8930-c206fc8e10bb" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\Projects\SolarOdyssey_JVM\out\production\SolarOdyssey_JVM\Conversation\ConstructionSiteMenu$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\SolarOdyssey_JVM\out\production\SolarOdyssey_JVM\Conversation\ConstructionSiteMenu$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\SolarOdyssey_JVM\out\production\SolarOdyssey_JVM\Conversation\ConstructionSiteMenu$3.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\SolarOdyssey_JVM\out\production\SolarOdyssey_JVM\Conversation\ConstructionSiteMenu.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\SolarOdyssey_JVM\out\production\SolarOdyssey_JVM\Event\Area\OnEnter$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\SolarOdyssey_JVM\out\production\SolarOdyssey_JVM\Item\OmniTool\AutoFollow$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\SolarOdyssey_JVM\out\production\SolarOdyssey_JVM\Item\OmniTool\AutoFollow.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\SolarOdyssey_JVM\out\production\SolarOdyssey_JVM\Item\OmniTool\OpenRestMenu.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\SolarOdyssey_JVM\out\production\SolarOdyssey_JVM\Item\OmniTool\UseStructureTool.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\SolarOdyssey_JVM\out\production\SolarOdyssey_JVM\System\DeathSystem.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\SolarOdyssey_JVM\out\production\SolarOdyssey_JVM\System\KeyItemSystem.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\SolarOdyssey_JVM\out\production\SolarOdyssey_JVM\System\MigrationSystem$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\SolarOdyssey_JVM\out\production\SolarOdyssey_JVM\System\MigrationSystem.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\SolarOdyssey_JVM\out\production\SolarOdyssey_JVM\System\PlayerAuthorizationSystem$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\SolarOdyssey_JVM\out\production\SolarOdyssey_JVM\System\PlayerAuthorizationSystem$2.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\SolarOdyssey_JVM\out\production\SolarOdyssey_JVM\System\PlayerAuthorizationSystem.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\SolarOdyssey_JVM\out\production\SolarOdyssey_JVM\System\StructureSystem.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projects\SolarOdyssey_JVM\out\production\SolarOdyssey_JVM\db-settings.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Dialog/ActionTaken.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Dialog/ActionTaken.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Dialog/AppearsWhen.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Dialog/AppearsWhen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Entities/AuthorizedDMEntity.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Entities/AuthorizedDMEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Conversation/BuildToolMenu.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Conversation/BuildToolMenu.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Common/Constants.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Common/Constants.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Entities/ConstructionSiteEntity.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Entities/ConstructionSiteEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Data/Repository/CraftRepository.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Data/Repository/CraftRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Data/DataAccess.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Data/DataAccess.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Dialog/DialogEnd.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Dialog/DialogEnd.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Dialog/DialogManager$1.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Dialog/DialogManager$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Dialog/DialogManager.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Dialog/DialogManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Dialog/DialogStart.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Dialog/DialogStart.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/GameObject/ItemGO.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/GameObject/ItemGO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Event/Module/OnClientEnter$1.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Event/Module/OnClientEnter$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Event/Module/OnClientEnter.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Event/Module/OnClientEnter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Event/Module/OnClientLeave.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Event/Module/OnClientLeave.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Event/Area/OnEnter.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Event/Area/OnEnter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Event/Module/OnExamine.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Event/Module/OnExamine.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Event/Module/OnLoad.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Event/Module/OnLoad.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Event/Module/OnNWNXChat.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Event/Module/OnNWNXChat.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Event/Module/OnPlayerDeath.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Event/Module/OnPlayerDeath.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Event/Module/OnPlayerRespawn.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Event/Module/OnPlayerRespawn.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Event/Module/OnUseFeat.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Event/Module/OnUseFeat.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Event/Module/OnUseItem.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Event/Module/OnUseItem.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Data/Repository/PCMigrationRepository.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Data/Repository/PCMigrationRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Entities/PlayerEntity.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Entities/PlayerEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/GameObject/PlayerGO$1.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/GameObject/PlayerGO$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/GameObject/PlayerGO.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/GameObject/PlayerGO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Conversation/RestMenu.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Conversation/RestMenu.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SolarOdyssey_JVM/SolarOdyssey_JVM.jar" afterPath="$PROJECT_DIR$/out/artifacts/SolarOdyssey_JVM/SolarOdyssey_JVM.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Common/StartUp$2.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Common/StartUp$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Common/StartUp$3.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Common/StartUp$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Common/StartUp.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Common/StartUp.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Entities/StructureBlueprintEntity.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Entities/StructureBlueprintEntity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Conversation/StructureStorage.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Conversation/StructureStorage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Conversation/TerritoryFlag.class" afterPath="$PROJECT_DIR$/out/production/SolarOdyssey_JVM/Conversation/TerritoryFlag.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SolarOdyssey_JVM/src/Common/CustomResMan.java" afterPath="$PROJECT_DIR$/SolarOdyssey_JVM/src/Common/CustomResMan.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/SolarOdyssey_JVM.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/SolarOdyssey_JVM.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="SolarOdyssey_JVM.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,7 +83,58 @@
     <favorites_list name="SolarOdyssey_JVM" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="IAbility.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Abilities/IAbility.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbilitySystem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/GameSystems/AbilitySystem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomResMan.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Common/CustomResMan.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StartUp.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Common/StartUp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.4237856">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Cure.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Abilities/Cure.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -35,6 +144,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
@@ -43,7 +155,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/SolarOdyssey_JVM/src/Event/DM/GiveXP.java" />
         <option value="$PROJECT_DIR$/SolarOdyssey_JVM/src/Event/DM/HealCreature.java" />
         <option value="$PROJECT_DIR$/SolarOdyssey_JVM/src/Event/DM/RestCreature.java" />
         <option value="$PROJECT_DIR$/SolarOdyssey_JVM/src/Event/DM/RunScript.java" />
@@ -94,6 +205,7 @@
         <option value="$PROJECT_DIR$/SolarOdyssey_JVM/src/Item/OmniTool/OpenRestMenu.java" />
         <option value="$PROJECT_DIR$/SolarOdyssey_JVM/src/Item/OmniTool/UseStructureTool.java" />
         <option value="$PROJECT_DIR$/SolarOdyssey_JVM/src/Item/Crafting/Blueprint.java" />
+        <option value="$PROJECT_DIR$/SolarOdyssey_JVM/src/Common/CustomResMan.java" />
       </list>
     </option>
   </component>
@@ -108,7 +220,6 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="960" />
     <option name="width" value="960" />
     <option name="height" value="1040" />
   </component>
@@ -135,8 +246,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -183,13 +293,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Item" />
+              <option name="myItemId" value="Common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -370,32 +481,32 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="960" y="0" width="960" height="1040" extended-state="0" />
+    <frame x="0" y="0" width="960" height="1040" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32939914" sideWeight="0.5042373" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.4957627" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.4957627" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -420,107 +531,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Event/DM/RunScript.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Event/DM/SpawnCreature.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Event/DM/ToggleImmortality.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Event/DM/ToggleInvulnerability.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Event/Player/OnHeartbeat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2562814">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Event/Module/OnUserDefined.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Event/Module/OnUseItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Event/Module/OnUseFeat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Event/Module/OnUnAcquireItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Event/Module/OnTogglePause.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Event/Module/OnToggleAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Event/Module/OnStealth.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Event/Module/OnSaveGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="5" selection-start-line="5" selection-start-column="24" selection-end-line="9" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -528,7 +542,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -536,15 +549,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/System/DeathSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.056951422">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -552,7 +556,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -560,7 +563,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -568,7 +570,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -576,7 +577,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -584,7 +584,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="10" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -592,7 +591,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -600,7 +598,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -608,15 +605,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Event/Module/OnLoad.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -624,7 +612,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -632,7 +619,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -640,7 +626,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -648,7 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -656,15 +640,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/System/PlayerAuthorizationSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -672,7 +647,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -680,7 +654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -688,7 +661,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -696,7 +668,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -704,7 +675,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -712,7 +682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -720,7 +689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -728,7 +696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -736,7 +703,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.45561138">
           <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -744,7 +710,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="31" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -752,7 +717,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="31" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -760,23 +724,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4840871">
           <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Conversation/ConstructionSiteMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Conversation/StructureStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28207964">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -784,46 +731,164 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Item/OmniTool/UseStructureTool.java">
+    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Event/Player/OnHeartbeat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16924779">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/GameObject/ItemGO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.11283186">
-          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-          <folding />
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/GameObject/CreatureGO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16924779">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Event/Module/OnLoad.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.24115044">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/GameObject/PlayerGO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.482301">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/GameSystems/Models/AreaInstanceModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03761062">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/GameSystems/AreaInstanceSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.28207964">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/GameSystems/CraftSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.0674777">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/GameSystems/ClassSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6570797">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Item/Crafting/Blueprint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11283186">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-          <folding />
+        <state vertical-scroll-proportion="0.1880531">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Item/OmniTool/OpenRestMenu.java">
+    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Item/OmniTool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20685841">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Placeable/CraftingDevice/OnClosed.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13163717">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Placeable/ClassChangeTerminal/OnUsed.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13163717">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Placeable/StructureSystem/ConstructionSite/OnAttacked.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26327434">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Placeable/StructureSystem/TerritoryFlag/OnUsed.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22566372">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Data/Repository/AbilityRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Conversation/StructureStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Abilities/Cure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Item/OmniTool/AutoFollow.java">
+    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Abilities/IAbility.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07522124">
-          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/System/StructureSystem.java">
+    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/GameSystems/AbilitySystem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.101769">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Common/CustomResMan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SolarOdyssey_JVM/src/Common/StartUp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.4237856">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding />
         </state>
       </provider>
