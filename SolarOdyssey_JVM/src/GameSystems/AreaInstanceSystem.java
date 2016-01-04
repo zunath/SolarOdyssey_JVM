@@ -1,6 +1,5 @@
 package GameSystems;
 
-import Common.CustomResMan;
 import GameSystems.Models.AreaInstanceModel;
 import NWNX.NWNX_Areas;
 import org.ini4j.Ini;
