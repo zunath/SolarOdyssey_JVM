@@ -29,15 +29,18 @@ public class FactionSystem {
     public static void OnModuleExamine(NWObject objSelf)
     {
         NWObject target = NWNX_Events.GetEventTarget();
+        CreatureGO creatureGO = new CreatureGO(target);
+        int factionID = creatureGO.GetFactionID();
+
         if(NWScript.getIsPC(target) ||
            NWScript.getObjectType(target) != ObjectType.CREATURE ||
            NWScript.getIsDM(objSelf) ||
-           !NWScript.getIsPC(objSelf)) return;
+           !NWScript.getIsPC(objSelf) ||
+           factionID <= 0) return;
 
         PlayerGO playerGO = new PlayerGO(objSelf);
-        CreatureGO creatureGO = new CreatureGO(target);
         FactionRepository repo = new FactionRepository();
-        PCFactionReputationEntity entity = repo.GetPCFactionReputationByID(playerGO.getUUID(), creatureGO.GetFactionID());
+        PCFactionReputationEntity entity = repo.GetPCFactionReputationByID(playerGO.getUUID(), factionID);
         if(entity == null) return;
 
         FactionEntity faction = entity.getFaction();
