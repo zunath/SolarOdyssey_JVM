@@ -55,13 +55,15 @@ public class FactionSystem {
     public static void OnCreatureDeath(NWObject objSelf)
     {
         NWObject pc = NWScript.getLastKiller();
-        if(!NWScript.getIsPC(pc) || NWScript.getIsDM(pc)) return;
+        CreatureGO creatureGO = new CreatureGO(objSelf);
+        int factionID = creatureGO.GetFactionID();
+
+        if(!NWScript.getIsPC(pc) || NWScript.getIsDM(pc) || factionID <= 0) return;
 
         Random random = new Random();
-        CreatureGO creatureGO = new CreatureGO(objSelf);
         FactionRepository repo = new FactionRepository();
         ServerConfigurationEntity config = ServerConfigurationRepository.GetServerConfiguration();
-        List<FactionRelationshipEntity> relationships = repo.GetFactionRelationships(creatureGO.GetFactionID());
+        List<FactionRelationshipEntity> relationships = repo.GetFactionRelationships(factionID);
 
         FactionRelationshipEntity selfFaction = new FactionRelationshipEntity();
         selfFaction.setFactionID(creatureGO.GetFactionID());
